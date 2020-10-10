@@ -2,9 +2,8 @@
          function Ff() {
              var a = "陈伯";
              var b = /[1-9][0-9]*/;
-             window.alert(b.test(a));
+             prompt("qing");
          }
-
          
          var treeData = [{
              "name": "",
@@ -297,7 +296,6 @@
                      // alert("add");
                      // alert(getJsonLength(may_need));
                      nodes.children[ll] = may_need; //将该json树添加到儿子节点作为关联
-                     console.log(find_name);
                      // alert("add success");
                      return fanhui2;
                  } else {
@@ -385,7 +383,6 @@
                          //alert(treeData[j].name);
 
                      } else if(/[1-9][0-9]*/.test(head_tmp) == false) {
-                         window.alert(true);
                         var children = {
                             "name": head_tmp,
                             "parent": "null",
@@ -472,7 +469,7 @@
              for (var i = 0; i <= count_shu; i++) {
                  shuInit(i)
              }
-         }
+            }
 
          //@nodes 源json树
          //@find_name 要找的导师名
