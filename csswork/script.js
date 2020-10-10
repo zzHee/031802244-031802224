@@ -1,26 +1,31 @@
+
+
 var baseText = null;
-        function showPopup(w,h){
-            var popUp = document.getElementById("inputcontent");
-            h = 100;
-            w = 100;
-            popUp.style.top = "200px";
-            popUp.style.left = "200px";
-            popUp.style.width = w + "px";
-            popUp.style.height = h + "px";
-            if (baseText == null) baseText = popUp.innerHTML;
-            // popUp.innerHTML = baseText + 
-            // "<div id=\"statusbar\"><button onclick=\"hidePopup();\">Close window<button></div>";
-            var sbar = document.getElementById("statusbar");
-            sbar.style.marginTop = (parseInt(h)-40) + "px";
-            popUp.style.color = "#ccc";
-            popUp.style.visibility = "visible";
+        function showPopup(){
+            var popUp = document.getElementsByClassName("input_card");
+            // h = 100;
+            // w = 100;
+            // popUp.style.top = "200px";
+            // popUp.style.left = "200px";
+            // popUp.style.width = w + "px";
+            // popUp.style.height = h + "px";
+            // if (baseText == null) baseText = popUp.innerHTML;
+            // // popUp.innerHTML = baseText + 
+            // // "<div id=\"statusbar\"><button onclick=\"hidePopup();\">Close window<button></div>";
+            // var sbar = document.getElementById("statusbar");
+            // sbar.style.marginTop = (parseInt(h)-40) + "px";
+            // popUp.style.color = "#ccc";
+            popUp[0].style.visibility = "visible";
         }
 
         function hidePopup(){
-            var popUp = document.getElementById("inputcontent");
-            popUp.style.visibility = "hidden";
+            var popUp = document.getElementsByClassName("input_card");
+            popUp[0].style.visibility = "hidden";
         }
-
+        function goandchase() {
+            hidePopup();
+            chase();
+        }
          //json接口
          function Ff() {
             var a = "陈伯";
@@ -365,6 +370,7 @@ var baseText = null;
             // var fflag = 0;
             // var daoshi = [];
             var all_data = document.getElementById("user").value;
+            console.log(all_data);
             //alert(xx);
             var sclice_data = [];
             var model_data = [];
