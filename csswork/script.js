@@ -25,6 +25,9 @@ var baseText = null;
         function goandchase() {
             hidePopup();
             chase();
+            var textc = document.getElementById("user");
+            textc.value = "";
+            win
         }
          //json接口
          function Ff() {
@@ -114,7 +117,7 @@ var baseText = null;
 
             update(root);
 
-            d3.select(self.frameElement).style("height", "500px");
+            // d3.select(self.frameElement).style("height", "1000px");
 
             function update(source) {
                 // Compute the new tree layout.计算新树图的布局
@@ -148,10 +151,9 @@ var baseText = null;
                     .attr("x", -35)
                     .attr("y", -22)
                     .attr("width", 100)
-                    .attr("height", 25)
-                    .attr("rx", 10)
-                    .style("fill", "rgba(0, 136, 0,0.7)"); //d 代表数据，也就是与某元素绑定的数据。
-
+                    .attr("height", 35)
+                    .attr("rx", 10) //d 代表数据，也就是与某元素绑定的数据。
+                    .style("fill", "#eff4fa");
                 //添加标签
                 nodeEnter.append("text")
                     .attr("x", function(d) {
@@ -163,7 +165,7 @@ var baseText = null;
                     .text(function(d) {
                         return d.name;
                     })
-                    .style("fill", "white")
+                    .style("fill", "#289dde")
                     .style("fill-opacity", 1e-6);
 
                 /*nodeEnter.append("line")
@@ -196,13 +198,14 @@ var baseText = null;
                     .attr("x", -35)
                     .attr("y", -22)
                     .attr("width", 100)
-                    .attr("height", 25)
+                    .attr("height", 35)
                     .attr("rx", 10)
-                    .style("fill", "rgba(0, 136, 0,0.7)");
+                    .style("fill", "#eff4fa");
 
                 nodeUpdate.select("text")
-                    .attr("text-anchor", "middle")
+                    // .attr("text-anchor", "middle")
                     .style("fill-opacity", 1);
+                    
 
                 // Transition exiting nodes to the parent's new position.过渡现有的节点到父母的新位置。
                 //最后处理消失的数据，添加消失动画
@@ -219,13 +222,14 @@ var baseText = null;
                     .attr("x", -35)
                     .attr("y", -22)
                     .attr("width", 100)
-                    .attr("height", 25)
+                    .attr("height", 35)
                     .attr("rx", 10)
-                    .style("fill", "rgba(0, 136, 0,0.7)");
+                    .style("fill", "#eff4fa");
 
                 nodeExit.select("text")
-                    .attr("text-anchor", "middle")
-                    .style("fill-opacity", 1e-6);
+                    // .attr("text-anchor", "middle")
+                    .style("margin-top", "10");
+                    // .style("fill-opacity", 1e-6);
 
                 // Update the links…线操作相关
                 //再处理连线集合
@@ -248,7 +252,7 @@ var baseText = null;
                             target: o
                         }); //diagonal - 生成一个二维贝塞尔连接器, 用于节点连接图.
                     })
-                    .attr('marker-end', 'url(#arrow)');
+                    // .attr('marker-end', 'url(#arrow)');
                 // Transition links to their new position.将斜线过渡到新的位置
                 //保留的连线添加过渡动画
                 link.transition()

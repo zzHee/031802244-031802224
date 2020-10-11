@@ -77,7 +77,11 @@
     color: white;
     font-size: 20px;
 }
-
+.link {
+    fill: none;
+    stroke: #289dde;
+    stroke-width: 2px;
+}
 /* #inputcontent1 {
     position: absolute;
     visibility: hidden;
@@ -118,6 +122,7 @@
     color: #289dde;
     font-size: 50px;
     font-weight: bold;
+    text-shadow: gray 2px 2px 3px;
     /* background-color: #888; */
 }
 
@@ -135,6 +140,7 @@
     font-weight: bold;
     outline: none;
     background-color: #289dde;
+    /* color: rgba(0, 136, 0,0.7); */
 }
 
 .flex-item3 {
@@ -147,17 +153,18 @@
 }
 
 #show-tree {
-    position: relative;
+    /* position: relative; */
+    position: absolute;
     left: 1%;
-    top: 2%;
-    height: 100%;
+    /* top: 2%; */
+    height: 80%;
+    padding-top: 0px;
     color: rgb(255, 255, 255);
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     line-height: 15vh;
-    text-shadow: rgb(34, 34, 34) 2px 2px 3px;
-    background: rgb(0, 136, 0, 0.7);
+    /* text-shadow: rgb(34, 34, 34) 2px 2px 3px; */
     border-radius: 6px;
-    opacity: 0.7;
+    opacity: 1;
 }
